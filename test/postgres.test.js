@@ -389,9 +389,6 @@ describe('postgres store API V2.0.0', function () {
       Assert(!err)
       Assert(product)
 
-      Assert.deepEqual(myTest, JSON.parse(JSON.stringify(product.name)))
-
-      Assert(product)
       product.load$({id: product.id}, function (err, product) {
         Assert(!err)
         Assert(product)
